@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<title>CSCI-571 Homework 4</title>
+		<style type="text/css">
+			body {
+				margin-top: 50px;
+				text-align: center;
+			}
+			input {
+				margin: 10px;
+				background-color: white;
+				
+			}
+		</style>
+		<script type="text/javascript">
+			var URL;
+			var html_text;
+			var hasError = false;
+			
+			function loadJSON(url) {
+				try {
+				  xmlhttp = new XMLHttpRequest();
+				  xmlhttp.open("GET",url,false);
+				  xmlhttp.send();
+				  if(xmlhttp.status == 200) {
+					if(xmlhttp.responseText.length == 0) {
+						hasError = true;
+						alert("Error: The requested JSON file is empty");
+					} else {
+						jsonObj = JSON.parse(xmlhttp.responseText);
+						return jsonObj;   
+					}
+				  } else if(xmlhttp.status == 404){
+					// This part of the code is executed in localhost
+					hasError = true;
+					alert("Error: The requested JSON file does not exist");
+				  }
+				} catch(err) {
+					//For handling freevar redirection issues
+					hasError = true;
+					alert("Error: The requested JSON file is not found. Please mention a valid JSON file.");
+				}
+			}
+			
+			function viewJSON(what) {
+				try {
+					URL = what.URL.value;
+					if(URL == undefined || URL == null || URL == "") {
+						hasError = true;
+						alert("Error: The URL textbox cannot be empty");
+						return;
+					} else {
+						jsonObj = loadJSON(URL);
+					}
+					if(!hasError) {
+						validateJson(jsonObj);
+						if(hasError) {
+							alert("Error: The JSON has an invalid structure. Please enter a valid JSON");
+							return;
+						}
+					}
+					if(!hasError) {
+						jsonObj.onload = generateHTML(jsonObj);
+					} 
+					if(!hasError) {
+						hWin = window.open("", "Assignment4", "height=1000,width=1000");
+						hWin.document.write(html_text); 
+						hWin.document.close();  
+					}             
+				} catch (err) {
+					console.log(err);
+					alert("Error: An unexpected error occoured");
+				}
+			}
+				
+			function validateJson(jsonObj) {
+				if(jsonObj == null || jsonObj == undefined || jsonObj == "") {
+					hasError = true;
+					return;
+				}
+				if(!jsonObj.hasOwnProperty("Mainline")) {
+					hasError = true;
+					return;
+				}
+				if(!jsonObj.Mainline.hasOwnProperty("Table")) {
+					hasError = true;
+					return;
+				}
+				if(!jsonObj.Mainline.Table.hasOwnProperty("Header")) {
+					hasError = true;
+					return;
+				}
+				if(!jsonObj.Mainline.Table.Header.hasOwnProperty("Data")) {
+					hasError = true;
+					return;
+				}
+			}
+			function generateHTML(jsonObj)   {
+				html_text = "<html lang='en'><head><title>Largest Manufacturers by Production (2017)</title><meta charset='utf-8'/></head><body>";
+				//Step 1: Create a table component
+				html_text += "<table border='2'>"; 
+				
+				//Step 2: Reading Header values from JSON
+				var table = jsonObj.Mainline.Table;
+				var tableHeader = table.Header;
+				var headerKeys = tableHeader.Data;
+				for(i = 0; i < headerKeys.length; i++){ 
+					//Append the header values to the table header
+					html_text+="<th>"+headerKeys[i]+"</th>";    			
+				}
+				
+				//Step 3: Read the rows from the JSON object
+				var rows = table.Row;
+				var countOfEmptyRows = 0;
+				//Handle the error condition when there are no rows
+				if(rows == undefined || rows == null || rows.length == 0) {
+					hasError = true;
+					alert("Error: The JSON file doesn't contain any buildings");
+				} else {
+					for(i = 0; i < rows.length; i++) {
+						if(rows[i].Rank === undefined 
+							|| rows[i].Name === undefined
+							|| rows[i].Hubs === undefined
+							|| rows[i].Hubs.Hub === undefined
+							|| rows[i].Height === undefined
+							|| rows[i].HomePage === undefined
+							|| rows[i].Logo === undefined) {
+							hasError = true;
+							alert("Error: Invalid JSON Keys");
+							break;
+						}
+						if(rows[i].Rank === ""
+							|| rows[i].Name === ""
+							|| rows[i].Hubs === ""
+							|| rows[i].Hubs.Hub.length === 0
+							|| rows[i].Height === ""
+							|| rows[i].HomePage === ""
+							|| rows[i].Logo === "") {
+							countOfEmptyRows++;
+						}
+						html_text += "<tr style='width:30px; height:30px;'>";
+						html_text += "<td>" + rows[i].Rank + "</td>"
+						html_text += "<td>" + rows[i].Name + "</td>"
+						html_text += "<td><ul>";
+						var hubs = rows[i].Hubs.Hub;
+						for(j = 0; j < hubs.length; j++) {
+							if(j == 0) {
+								html_text += "<li><b>" + hubs[j] + "</b></li>";
+							} else {
+								html_text += "<li>" + hubs[j] + "</li>";
+							}
+						}
+						html_text += "</ul></td>";
+						html_text += "<td>" + rows[i].Height + "</td>"
+						html_text += "<td><a href='" + rows[i].HomePage + "'>" + rows[i].HomePage + "</a></td>"
+						html_text += "<td><img src='" + rows[i].Logo + "' height=180 width=180/></td>"
+						html_text += "</tr>";
+					}
+					if(rows.length == countOfEmptyRows) {
+						hasError = true;
+						alert("Error: All rows in the table are empty");
+					}
+				}
+				//Step 4: Close the table body and html tags
+				html_text+="</table>";           
+				html_text+= "</bo" + "dy> </html>";  
+			}  
+		</script>
+	</head>
+	
+	<body>
+		<form id="container" method="GET">
+			<h2>Enter URL for list of tallest buildings JSON File</h2>
+			<input id="URL" type="text"></input><br/>
+			<input type="submit" value="Submit Query" onclick="viewJSON(this.form)"></input>
+		</form>
+	</body>
+</html>
