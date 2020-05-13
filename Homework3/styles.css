@@ -1,0 +1,89 @@
+body {
+	margin: 0px;
+	text-align: center;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+.images {
+	padding: 3px;
+	height: 350px;
+	width: 350px;
+	object-fit: cover;
+	float: left;
+}
+.footer-images {
+	height: 16px;
+	width: 16px;
+}
+.options {
+	padding-left: 15px;
+}
+#container {
+	display: inline-block;
+	width: 715px;
+	height: 1050px;
+}
+#image-section {
+	height: 720px;
+}
+#menu-panel {
+	height: 110px;
+	width: 600px;
+	border-style: solid;
+	border-width: 1px;
+	margin: 30px 60px 0px 60px;
+	text-align: center;
+}
+#name {
+	font-family: "Georgia"; 
+	font-size: 50px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+#home-image-section {
+	height: 720px;
+	margin-bottom: 20px;
+	margin-top: 70px;
+}
+#nature-image-section {
+	height: 760px;
+	margin-bottom: 20px;
+	margin-top: 40px;
+}
+#nature {
+	font-family: Georgia;
+	font-size: 25px;
+	text-align: left;
+	margin: 0px 0px 0px 7px;
+	height: 30px;
+}
+#menu-items {
+	font-family: Georgia;
+	font-size: 13px;
+	font-style: italic;
+	color: grey;
+	margin-top: 0px;
+}
+#copyright {
+	font-family: Georgia;
+	font-size: 10px;
+	font-style: italic;
+	color: #696969;
+	margin-bottom: 20px;
+	height: 10px;
+	width: 120px;
+	display: inline-block;
+	margin-top: 0px;
+}
+#footer {
+	margin-bottom: 25px;
+	height: 60px;
+}
+#footer-image-container {
+	word-spacing: 18px;
+	height: 16px;
+	width: 100px;
+	display: inline-block;
+}
