@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Homework6</title>
+
+    <!-- Load the CSS stylesheet -->
+    <link rel="stylesheet" href="styles.css" type="text/css">
+
+    <!-- Load d3.js -->
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+
+    <!-- Load d3-cloud -->
+    <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3.layout.cloud.js"></script>
+
+    <!-- Load local scripts.js file -->
+    <script src="scripts.js"></script>
+</head>
+
+<body onload="on_load()">
+<!-- Show the Google News and Search button on the left of the screen -->
+<div id="tabs">
+    <button id="tab_google_news_button" class="button active tablinks" onclick="openTab(event, 'google_news')">
+        <span class="tabs-text">Google News</span>
+    </button>
+    <br/>
+    <button id="tab_search_button" class="button tablinks" onclick="openTab(event, 'search')">
+        <span class="tabs-text">Search</span>
+    </button>
+</div>
+
+<div id="website_content">
+    <!-- Headlines and Frequent Words -->
+    <div id="google_news" class="tabcontent">
+        <div class="rows">
+            <div id="headlines"></div>
+            <div id="frequent_words"></div>
+        </div>
+
+        <!-- CNN -->
+        <div id="cnn_text" class="rows_text">
+            <span class="channel">CNN</span>
+        </div>
+        <div>
+            <hr class="horizontal_line"></hr>
+        </div>
+
+        <!-- CNN Cards-->
+        <div class="news_rows">
+            <div id="cnn_cards" class="group_of_cards">
+            </div>
+        </div>
+
+        <!-- Fox News -->
+        <div id="fox_news_text" class="rows_text">
+            <span class="channel">Fox News</span>
+        </div>
+        <div>
+            <hr class="horizontal_line"></hr>
+        </div>
+
+        <!-- Fox News Cards -->
+        <div class="news_rows">
+            <div id="fox_news" class="group_of_cards">
+            </div>
+        </div>
+    </div>
+
+    <div id="search" class="tabcontent">
+        <form id="search_form" method="GET" onsubmit="return search();">
+            <div id="search_query">
+                <div id="search_row1" class="search_rows">
+                    <label class="search_labels">Keyword</label>
+                    <span class="asterisk">*</span>
+                    <input type="text" id="search_text" required>
+                    <label class="search_labels">From</label>
+                    <span class="asterisk">*</span>
+                    <input type="date" id="search_from" class="date_fields" required>
+                    <label class="search_labels">To</label>
+                    <span class="asterisk">*</span>
+                    <input type="date" id="search_to" class="date_fields" required>
+                </div>
+                <div id="search_row2" class="search_rows">
+                    <label class="search_labels">Category</label>
+                    <select id="search_category" onchange="get_sources(this.value)">
+                        <option value="" class="select_options">all</option>
+                        <option value="business" class="select_options">business</option>
+                        <option value="entertainment" class="select_options">entertainment</option>
+                        <option value="general" class="select_options">general</option>
+                        <option value="health" class="select_options">health</option>
+                        <option value="science" class="select_options">science</option>
+                        <option value="sports" class="select_options">sports</option>
+                        <option value="technology" class="select_options">technology</option>
+                    </select>
+                    <label class="search_labels">Source</label>
+                    <select id="search_sources">
+                    </select>
+                </div>
+                <div class="search_rows">
+                    <input type="submit" value="Search" class="query_buttons">
+                    <input type="button" value="Clear" class="query_buttons" onclick="load_search_page()">
+                </div>
+            </div>
+        </form>
+
+		<div id="search_content">
+
+        </div>
+
+        <div id="search_buttons">
+            <input type="button" value="Show More" id="show_more_button" onclick="show_more_search_results()"
+                   class="show_cards_button">
+
+            <input type="button" value="Show Less" id="show_less_button" onclick="show_less_search_results()"
+                   class="show_cards_button">
+        </div>
+    </div>
+</div>
+</body>
+</html>

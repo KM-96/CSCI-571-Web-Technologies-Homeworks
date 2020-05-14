@@ -14,7 +14,7 @@
 <img src="https://github.com/KM-96/USC-CSCI-571-Homeworks/blob/master/Homework3/images/Home.png" width="300" height="300" />
 <img src="https://github.com/KM-96/USC-CSCI-571-Homeworks/blob/master/Homework3/images/Nature.png" width="300" height="300" />
 
-## Link
+## Links
 * [Website](http://km69564.freevar.com/HW3zAce6oM0zs/homepagef5XLbU69gW.html)
 * [Video](https://www.youtube.com/watch?v=7f6prBHDP_I&list=PL2TYhqFuRBAM1M285F-ZHsEX0HbAEQf3J&index=2&t=0s)
 

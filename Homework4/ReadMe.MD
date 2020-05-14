@@ -23,7 +23,7 @@
 * File is present and the structure of the JSON does not match.
 * File is present and the json is empty.
 
-## Link
+## Links
 * [Website](http://km69564.freevar.com/HW4GKucB3CV9i/HomepageI4Qwj1VHbh.html)
 * [Video](https://www.youtube.com/watch?v=pHEZ07khLLY)
 

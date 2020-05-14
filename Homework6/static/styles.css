@@ -1,0 +1,403 @@
+body {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	font-family: "Times New Roman";
+}
+
+#tab_google_news_button {
+    border-radius: 3px 3px 0px 0px;
+}
+
+#tab_search_button {
+    border-radius: 0px 0px 3px 3px;
+}
+
+#website_content {
+	text-align: center;
+	margin-left: 350px;
+	margin-right: 250px;
+	margin-top: 25px;
+	margin-bottom: 60px;
+	width: 800px;
+}
+
+.rows {
+	width: 100%;
+	height: 250px;
+}
+
+.news_rows {
+	width: inherit;
+	height: 300px;
+	text-align: center;
+}
+
+.rows_text {
+	margin-top: 20px;
+	width: inherit;
+	height: 30px;
+}
+
+a {
+	text-decoration: none;
+}
+
+#tabs {
+	margin-left: 170px;
+	position: fixed;
+	border-color: #A0A0A0;
+	border-width: 0.5px;
+	border-style: solid;
+	border-radius: 3px;
+
+}
+
+#headlines {
+	margin-left: 50px;
+}
+
+#headlines {
+	float: left;
+	height: 250px;
+	width: 425px;
+}
+
+.mySlides {
+	height: 250px;
+	width: 425px;
+	cursor: pointer;
+	object-fit: cover;
+}
+
+.slides_container {
+    position: relative;
+}
+
+div.top_headlines_text {
+    width: 425px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.top_headlines_title {
+	background: rgb(0, 0, 0); 
+	background: rgba(0, 0, 0, 0.5); 
+	color: white;
+	font-weight: bold;
+	font-size: 16px;
+	margin: 0px;
+	text-align: center;
+	padding: 5px;
+}
+
+.top_headlines_description {
+	background: rgb(0, 0, 0); 
+	background: rgba(0, 0, 0, 0.5); 
+	color: white;
+	font-size: 11px;
+	/*height: 40px;*/
+	margin: 0px;
+	text-align: center;
+	padding: 10px;
+}
+
+#frequent_words {
+	float: left;
+	height: 250px;
+	width: 250px;
+	margin-left: 30px;
+	background-color: #F5F5F5;
+}
+
+#tabs button {
+	text-align: center;
+	height: 40px;
+	width: 135px;
+	border-style: none;
+	display: inline-block;
+}
+
+#tabs button.active {
+    background-color: #666666;
+    color: white;
+}
+
+#tabs button:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.tabs-text {
+	font-family: "Times New Roman";
+	font-size: 16px;
+}
+
+.channel {
+	font-family: "Times New Roman";
+	font-weight: bold;
+	font-size: 25px;
+}
+
+.horizontal_line {
+	border-top: 1px dotted black;
+	margin: 0px 40px 0px 20px;
+	padding: 0px 0px 0px 0px;
+	border: 0px 0px 0px 0px;
+}
+
+.group_of_cards {
+	width: inherit;
+	height: inherit;
+	margin-top: 10px;
+	margin-left: 20px;
+}
+
+.card {
+	background-color: #F5F5F5;
+	width: 22%;
+	border-radius: 5px;
+	float: left;
+	height: 300px;
+	margin-right: 6px;
+	margin-left: 6px;
+	border-width: 1px;
+    border-style: solid;
+    cursor: pointer;
+    border-color: #909090;
+}
+
+.images {
+	width: 100%;
+	border-radius: 5px;
+	height: 35%;
+	object-fit: cover;
+}
+
+.image-text {
+	height: 65%;
+	text-align: center;
+	word-wrap: break-word;
+	margin-left: 5px;
+	margin-right: 5px;
+	overflow: hidden;
+}
+
+.image-title {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-weight: bold;
+	color: black;
+	font-size: 13px;
+}
+
+.image-description {
+	font-size: 11px;
+	color: black;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.asterisk {
+    color: red;
+    margin-right: 15px;
+}
+
+#search {
+    width: 700px;
+    margin-left: 60px;
+}
+
+#search_query {
+    width: inherit;
+    background-color: #F5F5F5;
+    height: 140px;
+    border-radius: 4px;
+}
+
+.search_labels {
+    font-family: "Times New Roman";
+    font-size: 14px;
+}
+
+.search_rows {
+    text-align: center;
+    padding: 8px;
+}
+
+#search_row1 {
+    padding-top: 27px;
+    padding-right: 24px;
+    padding-left: 30px;
+    text-align: left;
+}
+
+.search_images {
+    height: 85px;
+    width: 85px;
+    float: left;
+    margin: 20px;
+    object-fit: cover;
+}
+
+.search_title {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 125px;
+    text-align: left;
+}
+
+.search_description {
+    font-size: 13px;
+    margin-top: 5px;
+    margin-right: 20px;
+    padding-right: 20px;
+    text-align: left;
+}
+
+#search_content {
+    width: 640px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.search_card {
+    background-color: #F5F5F5;
+    width: inherit;
+    height: 120px;
+    margin-top: 10px;
+    position: relative;
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color:#808080;
+    cursor: pointer;
+}
+
+.search_card:hover {
+    transform: scale(1.01);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.show_cards_button {
+    margin-top: 20px;
+    width: 100px;
+    height: 25px;
+    background-color:  #F5F5F5;
+    margin-left: 300px;
+    border-radius: 3px;
+    border: 0px;
+}
+
+.show_cards_button:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.search_card_content {
+    margin-left: 125px;
+    text-align: left;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.search_content_labels {
+    font-weight: bold;
+    text-align: left;
+    font-size: 14px;
+}
+
+.search_content_values {
+    font-size: 13px;
+    padding-right: 20px;
+}
+
+.cross_mark {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin-right: 2px;
+    margin-top: 2px;
+    background-color: #F5F5F5;
+    border-width: 0px;
+    height: 20px;
+    width: 30px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#search_buttons {
+    margin-bottom: 30px;
+}
+
+input[type="text"], input[type="date"] {
+    height: 25px;
+    width: 120px;
+    border-radius: 1px;
+    border: 0px;
+    margin-right: 20px;
+}
+
+input[type="date"] {
+    width: 130px;
+}
+
+input:required:invalid {
+    outline: none;
+    box-shadow: 0 0 4px red;
+}
+
+.query_buttons {
+    background-color: #F0F0F0;
+    border: 0px;
+    width: 65px;
+    height: 20px;
+    margin-left: 25px;
+    border-radius: 2px;
+    font-size: 13px;
+}
+
+.query_buttons:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+select {
+    border-radius: 5px;
+    border: 0px;
+}
+select:focus {
+    outline: none;
+    box-shadow: 0 0 6px #0000FF;
+}
+
+#search_category, #search_sources {
+    margin-right: 10px;
+    margin-left: 5px;
+    text-align: center;
+    width: 135px;
+    height: 20px;
+}
+
+#search_text {
+    margin-right: 15px;
+}
+
+#search_row2 {
+    margin-left: 45px;
+}
+
+.select_options {
+    background-color: #F5F5F5;
+    padding: 0px;
+    font-size: 13px;
+}
+
+#no_search_results {
+    font-size: 15px;
+    margin-top: 20px;
+}
