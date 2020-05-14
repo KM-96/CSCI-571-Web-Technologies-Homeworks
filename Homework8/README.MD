@@ -1,4 +1,4 @@
-# CSCI 571 Homework 8: JSON Excercise
+# CSCI 571 Homework 8: Responsive Website Design Excercise
 
 ## Objective
 * Get familiar with the AJAX and JSON technologies.

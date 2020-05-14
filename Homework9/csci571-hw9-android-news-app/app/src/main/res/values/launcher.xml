@@ -1,0 +1,8 @@
+<resources>
+    <!-- The launcher theme. It sets the main window background to the launch_screen drawable -->
+    <style name="AppTheme.Launcher">
+        <item name="android:windowBackground">@drawable/launcher_screen_image</item>
+        <item name="android:theme">@style/Theme.AppCompat.Light.NoActionBar</item>
+    </style>
+
+</resources>

@@ -1,0 +1,24 @@
+{
+  "name": "csci571-homework8",
+  "version": "1.0.0",
+  "description": "A RESTful node js application built to fulfill the requirements for HOMEWORK8 CSCI571.",
+  "main": "application.js",
+  "scripts": {
+    "start": "node application.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "RESTful",
+    "API"
+  ],
+  "author": "KRISHNA MANOJ MADDIPATLA",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "google-trends-api": "^4.9.0",
+    "request": "^2.88.2"
+  }
+}

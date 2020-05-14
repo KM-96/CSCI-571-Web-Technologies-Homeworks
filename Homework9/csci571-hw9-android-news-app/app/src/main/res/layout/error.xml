@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/error_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Error loading page"
+        android:layout_centerInParent="true"
+        android:textColor="@color/white"
+        android:textSize="30dp" />
+    <Button
+        android:id="@+id/redirect_to_home_page_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/error_text"
+        android:text="Click Here To Redirect To Home Page" />
+</RelativeLayout>

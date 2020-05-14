@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/lightGray">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/headlines_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_height="wrap_content"
+        app:tabMode="scrollable"
+        app:tabIndicatorColor="@color/colorPrimary"
+        android:background="@color/white"
+        app:tabTextColor="@color/colorPrimary"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/world_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/world_tab_text" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/business_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/business_tab_text" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/politics_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/politics_tab_text" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/sports_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sports_tab_text" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/technology_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/technology_tab_text" />
+
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/science_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/science_tab_text" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/headlines_view_pager"
+        android:layout_below="@id/headlines_tab_layout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

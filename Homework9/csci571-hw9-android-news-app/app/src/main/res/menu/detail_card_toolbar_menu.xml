@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Search bar added on the end of the toolbar-->
+    <item
+        android:id="@+id/bookmarked_filled_image"
+        android:icon="@drawable/ic_bookmark_detail_filled"
+        android:orderInCategory="0"
+        android:title="Bookmark"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/bookmarked_border_image"
+        android:icon="@drawable/ic_bookmark_detail_border"
+        android:orderInCategory="1"
+        android:title="Bookmark"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/twitter_image"
+        android:icon="@drawable/twitter"
+        android:orderInCategory="2"
+        android:title="Twitter"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+
+</menu>
