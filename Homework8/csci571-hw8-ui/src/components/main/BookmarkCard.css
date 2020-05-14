@@ -1,0 +1,44 @@
+.favorites-title {
+    margin: 3%;
+    font-style: italic;
+}
+
+.favorites-image {
+    border-color: #d9d9d9;
+    margin: 4%;
+    width: 92% !important;
+    border-style: solid;
+    border-width: 1px;
+    padding: 1%;
+}
+
+.favorites-body {
+    padding: 0 !important;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-bottom: 4%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.favorites-date {
+    margin: 0 !important;
+    font-style: italic;
+}
+
+.favorites-badges {
+    justify-content: flex-end;
+    display: flex;
+    height: 100%;
+}
+
+.favorites-website-badge {
+    margin-left: 2%;
+}
+
+.favorites-card {
+    margin-top: 3%;
+    margin-bottom: 3%;
+    cursor: pointer;
+    box-shadow: 0 0px 2px 0 rgba(0, 0, 0, 0.2), 0 4px 7px 0 rgba(0, 0, 0, 0.19);
+}

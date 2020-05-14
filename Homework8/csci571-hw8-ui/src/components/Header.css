@@ -1,0 +1,83 @@
+.navigation-bar {
+    background-image: linear-gradient(to right, #193367 , #4675d2);
+}
+
+.navigation-elements {
+    font-size: 15px;
+    margin: 0px 0px 0px 0px;
+}
+
+.header-bookmark-icon {
+    font-size: 20px;
+    color: white;
+}
+
+.checked-bookmark-icon {
+    font-size: 20px;
+    color: white;
+}
+
+.news-labels {
+    font-size: 20px;
+    color: white !important;
+}
+
+.navigation-items-list {
+    width: 100%;
+}
+
+.react-switch {
+    margin-top: 6px;
+}
+
+.nav-section {
+    color : rgba(255,255,255,.5) !important;
+}
+
+.nav-section.active {
+    color : white !important;
+}
+
+.nav-section:hover {
+    color : rgba(255,255,255,.75) !important;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 594px) {
+    .searchBar {
+        width: 70%;
+    }
+}
+
+@media only screen and (min-width: 594px) and (max-width: 768px) {
+    .searchBar {
+        width: 70%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .searchBar {
+        width: 60%;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .searchBar {
+        width: 22%;
+    }
+
+    .news-labels {
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+
+    .nav-section {
+        padding-right: 6px;
+        padding-left: 6px;
+    }
+
+    .navigation-tabs-container {
+        height: 50px;
+    }
+}

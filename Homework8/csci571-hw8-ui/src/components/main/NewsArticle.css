@@ -1,0 +1,56 @@
+.card-description {
+    overflow: hidden;
+    width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.link-to-detailed-article {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+}
+
+.link-to-detailed-article:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+}
+
+.article-title {
+    font-weight: bold !important;
+    font-style: italic;
+}
+
+.date-style {
+    font-style: italic;
+}
+
+.title-share-style {
+    display: flex;
+}
+
+.date-section-style {
+    display: flex;
+    height: 20px;
+    justify-content: space-between;
+}
+
+.article-card {
+    box-shadow: 0 0px 2px 0 rgba(0, 0, 0, 0.2), 0 4px 7px 0 rgba(0, 0, 0, 0.19);
+    margin: 1%;
+}
+
+.article-image {
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: auto;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    padding: 3px;
+    border-color: #DCDCDC;
+}

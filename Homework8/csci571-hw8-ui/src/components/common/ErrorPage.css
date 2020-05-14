@@ -1,0 +1,11 @@
+.error-page-container {
+    color: white;
+    text-align: center;
+    width: 75%;
+    background-color: black;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+

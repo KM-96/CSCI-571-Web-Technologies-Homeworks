@@ -1,0 +1,53 @@
+.detail-article-card {
+    box-shadow: 0 0px 2px 0 rgba(0, 0, 0, 0.2), 0 4px 7px 0 rgba(0, 0, 0, 0.19);
+    margin: 2%;
+    width: 100%;
+}
+
+.detail-card-title {
+    font-style: italic;
+    margin-top: 2%;
+}
+
+.detail-date-style {
+    font-style: italic;
+}
+
+.article-detail-bookmark-icon {
+    font-size: 25px;
+    color: red;
+}
+
+.detail-card-arrow {
+    font-size: 20px;
+}
+
+.detail-card-arrow-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.detail-share-icons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.detail-date-icons-container {
+    margin-bottom: 1%;
+}
+
+.detail-card-image-container, .detail-description-container {
+    margin-bottom: 2%;
+}
+
+.expanded-description, .minimized-view {
+    text-align: justify;
+}
+
+.text-align-justify {
+    text-align: justify;
+}
+
+.description {
+    display: inline;
+}

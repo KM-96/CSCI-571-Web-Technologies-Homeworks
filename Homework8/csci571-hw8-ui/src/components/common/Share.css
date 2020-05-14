@@ -1,0 +1,8 @@
+.share-via-text {
+    text-align: center;
+}
+
+.share-icons-container {
+    display: flex;
+    justify-content: space-around;
+}

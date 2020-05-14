@@ -1,4 +1,4 @@
-# CSCI 571 Homework 4: JSON Excercise
+# CSCI 571 Homework 6: Server Side Scripting
 
 ## Objective
 * Get experience with the Python programming language.
